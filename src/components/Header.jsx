@@ -1,8 +1,40 @@
-function Header(){
-    return (
-       <header className="border-b p-4">
-        <h1 className="test-2xl font-bold">React Concept Lab</h1>
-      </header>
-    )
+import { Menu } from "lucide-react"
+
+function Header({ sidebarOpen, setSidebarOpen }) {
+  return (
+    <header className="h-[72px] border-b border-indigo-100 bg-gradient-to-r from-indigo-100 via-purple-100 to-indigo-100 px-4 shadow-sm sm:px-6">
+      <div className="flex h-full items-center justify-between">
+
+        <div className="flex items-center gap-3">
+
+          {/* Mobile Menu */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="rounded-lg p-2 text-indigo-700 transition hover:bg-white/60 md:hidden"
+            aria-label="Open menu"
+          >
+            <Menu size={22} strokeWidth={2} />
+          </button>
+
+          <div>
+            <h1 className="text-lg font-bold text-indigo-900 sm:text-xl">
+              React Concept Lab
+            </h1>
+
+            <p className="hidden text-sm text-indigo-600 sm:block">
+              Learn • Practice • Explain • Master
+            </p>
+          </div>
+
+        </div>
+
+        <div className="hidden rounded-full border border-indigo-200 bg-white/60 px-4 py-2 text-sm font-medium text-indigo-700 shadow-sm sm:block">
+          React Interview Prep
+        </div>
+
+      </div>
+    </header>
+  )
 }
+
 export default Header

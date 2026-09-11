@@ -1,1 +1,19 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+/* Sidebar Scrollbar */
+.sidebar-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 9999px;
+}
+
+.sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #818cf8;
+}
