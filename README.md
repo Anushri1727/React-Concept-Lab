@@ -1,16 +1,59 @@
-# React + Vite
+# React Concept Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A hands-on React learning and interview preparation project designed to understand, practice, and demonstrate core-to-advanced React concepts through interactive examples.
 
-Currently, two official plugins are available:
+## 🚀 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React Concept Lab provides a structured way to learn React concepts by combining:
 
-## React Compiler
+- Concise concept explanations
+- Practical code examples
+- Live interactive demos
+- Common mistakes
+- Interview questions
+- Real-world use cases
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project is built as a personal React reference and practice lab rather than a traditional documentation site.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript (ES6+)
+- Tailwind CSS
+- Lucide React
+- Sandpack
+
+## 📚 Concepts Covered
+
+- React Hooks
+- Components & Higher Order Components
+- Component Lifecycle
+- Props & State
+- Prop Drilling & Context API
+- Redux, Redux Toolkit & Zustand
+- Custom Hooks
+- Performance & Rendering
+- React Router
+- SSR vs CSR
+- Testing & Async Operations
+- Production Optimization
+- Accessibility & Security
+
+## ✨ Features
+
+- Responsive documentation-style layout
+- Expandable concept navigation
+- Interactive live React playgrounds
+- Copyable code examples
+- Concept-wise interview questions
+- Practical examples and common mistakes
+- Clean and minimal UI focused on learning
+
+## ⚙️ Getting Started
+
+### Clone the repository
+
+```bash
+git clone <repository-url>
+cd react-concept-lab
