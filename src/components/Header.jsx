@@ -33,7 +33,7 @@ function Header({ sidebarOpen, setSidebarOpen, viewMode, setViewMode }) {
 
         <button 
           onClick={() => setViewMode(viewMode === 'concepts' ? 'interview' : 'concepts')}
-          className="hidden rounded-full border border-indigo-200 bg-white/60 px-4 py-2 text-sm font-bold text-indigo-700 shadow-sm transition hover:bg-indigo-50 hover:text-indigo-900 sm:block"
+          className=" cursor-pointer hidden rounded-full border border-indigo-200 bg-white/60 px-4 py-2 text-sm font-bold text-indigo-700 shadow-sm transition hover:bg-indigo-50 hover:text-indigo-900 sm:block"
         >
           {viewMode === 'concepts' ? 'React Interview Prep' : 'Back to Concept Lab'}
         </button>
