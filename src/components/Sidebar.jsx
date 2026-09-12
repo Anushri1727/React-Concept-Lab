@@ -7,6 +7,7 @@ function Sidebar({
   setSelectedTopic,
   sidebarOpen,
   setSidebarOpen,
+  setViewMode,
 }) {
   const [expandedSections, setExpandedSections] = useState(["hooks"])
 
@@ -63,6 +64,20 @@ function Sidebar({
 
           {/* Main Categories */}
           <nav className="space-y-1">
+            {/* Mobile Only: Interview Prep Link */}
+            <div className="mb-4 border-b border-indigo-100 pb-2 sm:hidden">
+              <button
+                onClick={() => {
+                  setViewMode('interview');
+                  setSidebarOpen(false);
+                }}
+                className="flex w-full items-center justify-between rounded-lg bg-indigo-600 px-3 py-2.5 text-left font-semibold text-white shadow-sm transition hover:bg-indigo-700"
+              >
+                <span>React Interview Prep</span>
+                <ChevronRight size={16} strokeWidth={2} className="opacity-70" />
+              </button>
+            </div>
+
             {concepts.map((category) => {
               const isExpanded = expandedSections.includes(category.id)
 
@@ -129,23 +144,6 @@ function Sidebar({
           </nav>
         </div>
 
-        {/* Sidebar Footer (Profile + Built With) */}
-        <div className="border-t border-indigo-200 bg-indigo-50/80 p-4">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-200 font-bold text-indigo-800 shadow-sm">
-              AG
-            </div>
-            <div className="flex-1 overflow-hidden">
-              <p className="truncate text-sm font-bold text-indigo-900">Anushri Golwalkar</p>
-              <p className="truncate text-xs text-indigo-600">React Enthusiast</p>
-            </div>
-          </div>
-          <div className="mt-4 border-t border-indigo-200/50 pt-3">
-            <p className="text-center text-[10px] uppercase tracking-wider text-indigo-500">
-              Built with React & Tailwind
-            </p>
-          </div>
-        </div>
       </aside>
     </>
   )

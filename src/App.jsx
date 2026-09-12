@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import MainContainer from "./components/MainContent"
 import Sidebar from "./components/Sidebar"
 import InterviewPrep from "./components/InterviewPrep"
+import Footer from "./components/Footer"
 import concepts from "./data/concepts"
 
 function App() {
@@ -25,23 +26,21 @@ function App() {
         setViewMode={setViewMode}
       />
       <div className="flex h-[calc(100vh-73px)]">
-        {viewMode === 'concepts' ? (
-          <>
-            <Sidebar 
-              selectedTopic={selectedTopic} 
-              setSelectedTopic={handleTopicSelect} 
-              sidebarOpen={sidebarOpen} 
-              setSidebarOpen={setSidebarOpen}
-            />
-            <main className="min-w-0 flex-1 overflow-y-auto">
-              <MainContainer selectedTopic={selectedTopic} />
-            </main>
-          </>
-        ) : (
-          <main className="min-w-0 flex-1 overflow-y-auto bg-gray-50/50">
+        <Sidebar 
+          selectedTopic={selectedTopic} 
+          setSelectedTopic={handleTopicSelect} 
+          sidebarOpen={sidebarOpen} 
+          setSidebarOpen={setSidebarOpen}
+          setViewMode={setViewMode}
+        />
+        <main className="flex min-w-0 flex-1 flex-col overflow-y-auto bg-gray-50/50">
+          {viewMode === 'concepts' ? (
+            <MainContainer selectedTopic={selectedTopic} />
+          ) : (
             <InterviewPrep />
-          </main>
-        )}
+          )}
+          <Footer />
+        </main>
       </div>
     </div>
   )
